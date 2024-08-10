@@ -3,6 +3,7 @@ import './Apps.css'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import SelectMenu from './components/SelectMenu'
+import CountriesList from './components/CountriesList'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
             <SearchBar/>
             <SelectMenu/>
             </div>
+            <CountriesList/>
          </main>
     </div>
   )
