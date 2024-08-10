@@ -2,10 +2,14 @@ import React from 'react'
 import countriesData from '../countriesData'
 import CountryCard from './CountryCard'
 
-const CountriesList = () => {
+const CountriesList = ({query}) => {
   return (
     <div className="countries-container">
-      {countriesData.map((country) => {
+        {countriesData
+          .filter((country) =>
+            country.name.common.toLowerCase().includes(query)
+          )
+          .map((country) => {
         return (
           <CountryCard
             key={country.name.common}
